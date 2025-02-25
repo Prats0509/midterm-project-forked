@@ -49,32 +49,44 @@
             </nav>
             <!-- Page content-->
             <div id="content" class="container-fluid p-5">
-                <h1 class="mt-4">Simple Sidebar</h1>
-                <p>The starting state of the menu will appear collapsed on smaller screens, and will appear
-                    non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                <p>
-                    Make sure to keep all page content within the
-                    <code>#page-content-wrapper</code>
-                    . The top navbar is optional, and just for demonstration. Just create an element with the
-                    <code>#sidebarToggle</code>
-                    ID which will toggle the menu when clicked.
-                </p>
-                <div class="alert alert-primary" role="alert">
-                    Here's an example of how to assemble your products. Pay close attention to all the details,
-                    especially the dependencies, as they are crucial for the proper setup. Although this is not
-                    described in the documentation, it would show attention to detail if you remove this example from
-                    the homepage after use. You can simply comment it out. Don’t forget to do the same for the
-                    JavaScript code to avoid any errors due to missing dependencies.
-                </div>
+                <h2 class="mb-4">Add New Product</h2>
+                <form>
+ 
+                    <div class="mb-3">
+                        <label for="productPhoto" class="form-label">Product Photo</label>
+                        <input type="file" class="form-control" id="productPhoto" accept="image/*">
+                    </div>
 
-                <div class="alert alert-warning" role="alert">
-                    Create your own layout, don't just copy this example, use your creativity.
-                </div>
+                    <div class="mb-3">
+                        <label for="productTitle" class="form-label">Product Title</label>
+                        <input type="text" class="form-control" id="productTitle" placeholder="Enter product title"
+                            required>
+                    </div>
 
-                <h2>Product list example</h2>
-                <div id="products" class="d-flex gap-2">
-                    <!-- Products -->
-                </div>
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label">Product Description</label>
+                        <textarea class="form-control" id="productDescription" rows="3" maxlength="100"
+                            placeholder="Enter a brief description (max 100 characters)" required></textarea>
+                    </div>
+
+         
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Price ($)</label>
+                        <input type="number" class="form-control" id="productPrice" step="0.01"
+                            placeholder="Enter product price" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="productQuantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="productQuantity" min="1"
+                            placeholder="Enter quantity" required>
+                    </div>
+
+                    
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </form>
+
+
             </div>
         </div>
     </div>
